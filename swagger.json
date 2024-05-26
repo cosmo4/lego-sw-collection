@@ -8,7 +8,7 @@
     "host": "lego-sw-collection.onrender.com",
     "basePath": "/",
     "schemes": [
-      "http"
+      "https"
     ],
     "paths": {
       "/legoSets/": {
