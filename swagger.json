@@ -5,7 +5,7 @@
       "description": "Use this to access my list of lego sets",
       "version": "1.0.0"
     },
-    "host": "localhost:8080",
+    "host": "lego-sw-collection.onrender.com",
     "basePath": "/",
     "schemes": [
       "http"
