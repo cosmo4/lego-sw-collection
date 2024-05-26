@@ -1,0 +1,19 @@
+GET http://localhost:8080/legoSets
+###
+
+POST http://localhost:8080/legoSets
+Content-Type: application/json
+
+{
+    "setNumber": "75326",
+    "name": "TEST SET",
+    "pieceCount": 500,
+    "price": 50,
+    "characters": [
+      "Luke Skywalker",
+      "Darth Vader",
+      "R2-D2"
+    ],
+    "built": true,
+    "purchaseDate": "01-01-2024"
+}

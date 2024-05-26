@@ -1,0 +1,77 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "My Contacts API",
+      "description": "Use this to access my list of lego sets",
+      "version": "1.0.0"
+    },
+    "host": "localhost:8080",
+    "basePath": "/",
+    "schemes": [
+      "http"
+    ],
+    "paths": {
+      "/legoSets/": {
+        "get": {
+          "description": "Get all lego sets in collection",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        },
+        "post": {
+          "description": "Add a new set to collection",
+          "parameters": [
+            {
+                "name": "body",
+                "in": "body",
+                "schema": {
+                    "type": "object",
+                    "required": ["setNumber", "name", "pieceCount", "price", "characters", "built", "purchaseDate"],
+                    "properties": {
+                        "setNumber": {
+                            "example": "70707"
+                        },
+                        "name": {
+                            "example": "Jabba's Palace"
+                        },
+                        "pieceCount": {
+                            "example": 1000
+                        },
+                        "price": {
+                            "example": 89.99
+                        },
+                        "characters": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            },
+                            "example": ["Jabba", "Gammorean Guard", "Princess Leia"]
+                          },
+                        "built": 
+                        {
+                            "example": true
+                        },
+                        "purchaseDate": {
+                            "example": "01-01-2020"
+                        }
+                    }
+                }
+            }
+          ],
+          "responses": {
+            "201": {
+              "description": "Added successfully"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      }
+    }
+  }
