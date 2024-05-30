@@ -20,8 +20,12 @@ const startServer = () => {
     .use((req, res, next) => {
         res.setHeader('Access-Control-Allow-Origin', '*');
         next();
+    })
+    .use((err, req, res, next) => {
+      res.status(500).json({ message: err });
     });
 }
+
 const port = 8080;
 
 mongodb.initDb((err) => {

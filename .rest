@@ -5,19 +5,35 @@ POST http://localhost:8080/legoSets
 Content-Type: application/json
 
 {
-    "setNumber": "75326",
-    "name": "TEST SET",
+    "setNumber": "75324",
+    "name": "validate test",
+    "pieceCount": 22,
+    "price": 50,
+    "characters": [
+    ],
+    "built": "true",
+    "purchaseDate": "01-01-2025"
+}
+###
+
+PUT http://localhost:8080/legoSets/6657f409b880afef775698a5
+Content-Type: application/json
+
+{
+  "setNumber": "75326",
+    "name": "Zusty Stormtrooper",
     "pieceCount": 500,
     "price": 50,
     "characters": [
-      "Luke Skywalker",
-      "Darth Vader",
-      "R2-D2"
     ],
     "built": true,
     "purchaseDate": "01-01-2024"
 }
 ###
+
+DELETE http://localhost:8080/legoSets/6657f409b880afef775698a5
+###
+
 # RENDER REQUESTS
 
 GET https://lego-sw-collection.onrender.com/legoSets
@@ -38,4 +54,25 @@ Content-Type: application/json
     "built": true,
     "purchaseDate": "01-01-2024"
 }
+###
+
+PUT https://lego-sw-collection.onrender.com/legoSets/6657f409b880afef775698a5
+Content-Type: application/json
+
+{
+    "setNumber": "75326",
+    "name": "TEST SET",
+    "pieceCount": 500,
+    "price": 50,
+    "characters": [
+      "Luke Skywalker",
+      "Darth Vader",
+      "R2-D2"
+    ],
+    "built": true,
+    "purchaseDate": "01-01-2024"
+}
+###
+
+DELETE https://lego-sw-collection.onrender.com/legoSets/6657f409b880afef775698a5
 ###
