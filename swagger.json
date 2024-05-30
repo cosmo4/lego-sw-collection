@@ -5,10 +5,10 @@
     "description": "Use this to access my list of contacts",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "lego-sw-collection.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/legoSets/": {
