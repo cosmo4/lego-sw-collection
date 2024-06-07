@@ -1,8 +1,8 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "My Contacts API",
-    "description": "Use this to access my list of contacts",
+    "title": "Lego Star Wars Collection API",
+    "description": "Use this to access my list of Lego Star Wars sets",
     "version": "1.0.0"
   },
   "host": "lego-sw-collection.onrender.com",
