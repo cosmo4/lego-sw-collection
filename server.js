@@ -8,6 +8,7 @@ const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
 
 const app = express();
+const port = 8080;
 
 const startServer = () => {
   const legoSetRoute = require('./routes/legoSets');
@@ -20,24 +21,20 @@ const startServer = () => {
     .use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
     .use('/legoSets', legoSetRoute);
 
-  // Serve index.html for the root URL
   app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
   });
 
-  // Error handling middleware
   app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).json({ message: err.message });
   });
 
-  // Start listening for connections
   app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
   });
 };
 
-const port = 8080;
 
 mongodb.initDb((err) => {
   if (err) {
