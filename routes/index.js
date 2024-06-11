@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-// maybe youll need this? const legoSetController = require('../controllers/legoSetController');
 const legoSetRoute = require('./legoSets');
 
 const swaggerUi = require('swagger-ui-express');
